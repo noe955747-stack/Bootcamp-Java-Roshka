@@ -1,14 +1,12 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Generala_Juego {
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String resultado = new Generala_Juego().jugada(sc.next());
-        System.out.println(resultado);
-        probabilidad(resultado);
+        Generala_Juego resultado = new Generala_Juego();
+        System.out.println(resultado.jugada("32154"));
+        probabilidad(resultado.jugada("32154"));
     }
-
     String jugada(String dados)
     {
         boolean inv = validarJugada(dados);
@@ -32,47 +30,61 @@ public class Generala_Juego {
         sc.close();
         return true;
     }
-    public static String identificarJugada(String jugada){
+    public static String identificarJugada(String jugada) {
         String tipoJugada = "";
         Set<Character> digitosRep = new HashSet<>();
         int[] rep = new int[6];
+
         List<Character> escalera1 = Arrays.asList('1', '2', '3', '4', '5');
         List<Character> escalera2 = Arrays.asList('2', '3', '4', '5', '6');
         List<Character> escalera3 = Arrays.asList('3', '4', '5', '6', '1');
+
         for (char c : jugada.toCharArray()) {
             digitosRep.add(c);
-            rep[(c - '0')-1]++;
+            rep[(c - '0') - 1]++;
         }
+
         int d = digitosRep.size();
-        switch(d){
+
+        switch (d) {
             case 1:
-                tipoJugada ="GENERALA";
+                tipoJugada = "GENERALA";
                 break;
             case 2:
-                if(Arrays.asList(rep).contains(4)){
-                    tipoJugada ="POKER";
-                }else if(Arrays.asList(rep).contains(3)){
-                    tipoJugada ="FULL";
-                }else{
-                    tipoJugada ="NADA";
+                boolean tieneCuatro = false;
+                boolean tieneTres = false;
+                for (int r : rep) {
+                    if (r == 4) tieneCuatro = true;
+                    if (r == 3) tieneTres = true;
+                }
+                if (tieneCuatro) {
+                    tipoJugada = "POKER";
+                } else if (tieneTres) {
+                    tipoJugada = "FULL";
+                } else {
+                    tipoJugada = "NADA";
                 }
                 break;
             case 5:
                 List<Character> jugadaList = jugada.chars()
                         .mapToObj(c -> (char) c)
-                        .toList();
-                if(new HashSet<>(jugadaList).containsAll(escalera1) || new HashSet<>(jugadaList).containsAll(escalera2) || new HashSet<>(jugadaList).containsAll(escalera3)){
+                        .collect(Collectors.toList());
+
+                Set<Character> jugadaSet = new HashSet<>(jugadaList);
+                if (jugadaSet.containsAll(escalera1) || jugadaSet.containsAll(escalera2) || jugadaSet.containsAll(escalera3)) {
                     tipoJugada = "ESCALERA";
-                }else{
-                    tipoJugada ="NADA";
+                } else {
+                    tipoJugada = "NADA";
                 }
                 break;
             default:
-                tipoJugada ="NADA";
+                tipoJugada = "NADA";
                 break;
         }
+
         return tipoJugada;
     }
+
     public static void probabilidad(String  tipoJugada){
         double posibilidades = 7776;
         double prob = 0;
