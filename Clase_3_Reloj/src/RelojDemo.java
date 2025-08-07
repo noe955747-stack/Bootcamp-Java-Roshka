@@ -21,4 +21,12 @@ public class RelojDemo {
         relojDemo.restaReloj(reloj2);
         System.out.println("La diferencia es: "+relojDemo);
     }
+
+    public void MetodoFork() {
+        System.out.println("Metodo Fork");
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Iteracion " + i);
+        }
+    }
 }
