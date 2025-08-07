@@ -30,6 +30,7 @@ public class Main {
                 }
             }
         }while(!bandera);
+        sc.close();
     }
     private static String leerPila(Pila A, Pila B, Pila C){
         Scanner sc = new Scanner(System.in);
@@ -66,6 +67,7 @@ public class Main {
                     System.out.println("Pila no valida. Ingresa de nuevo: ");
             }
         }while(!bandera);
+        sc.close();
         return pilaSec;
     }
     private static void reducirContadores(String pila, Pila A, Pila B, Pila C){
@@ -93,5 +95,6 @@ public class Main {
                 System.out.println("Cantidad no valida.");
             }
         }while(!bandera);
+        sc.close();
     }
 }
