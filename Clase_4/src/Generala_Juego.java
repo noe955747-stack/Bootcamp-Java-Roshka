@@ -111,6 +111,7 @@ public class Generala_Juego {
                 prob = (7776-6-150-300-3)/posibilidades;
                 break;
         }
-        System.out.println("Probabilidad de la jugada en un tiro " + (prob*100)+"%");
+        String probabilidad = String.format("%.3f", (prob*100));
+        System.out.println("Probabilidad de la jugada en un tiro " + probabilidad+"%");
     }
 }
