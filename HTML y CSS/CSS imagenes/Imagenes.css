@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+.tarjeta{
+    border: 3px solid black;
+    transition: opacity 0.5s ease-out;
+    height:200px;
+    width:200px;
+}
+.tarjeta:hover{
+    border: 3px solid chartreuse;
+    z-index: 100;
+}
+.uno{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.dos{
+    position: absolute;
+    top: 105px;
+    left: 105px;
+}
+.tres{
+    position: absolute;
+    top: 205px;
+    left: 205px;
+}
+.cuatro{
+    position: absolute;
+    top: 305px;
+    left: 305px;
+}
+.cinco{
+    position: absolute;
+    top: 405px;
+    left: 405px;
+}
+.tarjeta.uno:hover ~ .tarjeta.dos,
+.tarjeta.uno:hover ~ .tarjeta.tres,
+.tarjeta.uno:hover ~ .tarjeta.cuatro,
+.tarjeta.uno:hover ~ .tarjeta.cinco{
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+.tarjeta.dos:hover ~ .tarjeta.tres,
+.tarjeta.dos:hover ~ .tarjeta.cuatro,
+.tarjeta.dos:hover ~ .tarjeta.cinco{
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+.tarjeta.tres:hover ~ .tarjeta.cuatro,
+.tarjeta.tres:hover ~ .tarjeta.cinco{
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+.tarjeta.cuatro:hover ~ .tarjeta.cinco{
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}

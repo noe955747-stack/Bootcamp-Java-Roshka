@@ -1,0 +1,23 @@
+.logo{
+    height:30px;
+    width: 40px;
+}
+.celdaclub{
+    width: 300px;
+}
+td{
+    padding: 5px;
+    border-top: 1px solid black;
+    align-content: center;
+}
+table {
+    border-collapse: collapse;
+    margin: 100px auto;
+
+}
+.par{
+    background-color: cadetblue;
+}
+.impar{
+    background-color: darkslateblue;
+}

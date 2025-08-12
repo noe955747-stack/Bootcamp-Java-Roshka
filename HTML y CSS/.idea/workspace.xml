@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61df1a9d-5e43-4a4d-8378-aa39c711995f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Imagenes.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Imagenes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/torneo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS imagenes/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS imagenes/.idea/CSS imagenes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS imagenes/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS imagenes/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS imagenes/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS imagenes/Imagenes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS imagenes/Imagenes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,21 +30,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "noe955747-stack"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;noe955747-stack&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/noe955747-stack/Bootcamp-Java.git",
-    "accountId": "696daf46-7299-4fd8-af59-a589ad84ccf7"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/noe955747-stack/Bootcamp-Java.git&quot;,
+    &quot;accountId&quot;: &quot;696daf46-7299-4fd8-af59-a589ad84ccf7&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="319XJ6nyGohtZwI8MGsZoGCRPNE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -62,8 +67,21 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "HTML"
+    ]
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="HTML y CSS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,6 +98,8 @@
       <option name="presentableId" value="Default" />
       <updated>1754937186871</updated>
       <workItem from="1754937188500" duration="5887000" />
+      <workItem from="1754998490558" duration="1356000" />
+      <workItem from="1755003830064" duration="159000" />
     </task>
     <servers />
   </component>
