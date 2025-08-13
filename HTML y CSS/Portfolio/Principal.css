@@ -1,0 +1,95 @@
+body{
+    background-color: linen;
+}
+.titulos1{
+    color: darkslategray;
+    font-size: 72px;
+}
+.titulos2{
+    font-size: 40px;
+    color: midnightblue;
+}
+.contenedor1{
+    border: 3px solid black;
+    align-content: center;
+    height: 550px;
+    width: 400px;
+    position: relative;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    padding: 3px;
+}
+.ventana{
+    border: 3px solid darkslategray;
+    background-color: cadetblue;
+    border-radius: 10px;
+    height: 500px;
+    width: 400px;
+    position: relative;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    padding: 20px
+}
+.cuerpo{
+    border-top: 1px solid black;
+    box-sizing: border-box;
+}
+.cabezal{
+    background-color: cadetblue;
+    text-align: center;
+    color: linen;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.encabezado {
+    display: flex;
+    justify-content: space-between; /* o center, flex-start, etc. */
+    align-items: center;
+    padding: 10px;
+    background-color: darkslategrey;
+    color: linen;
+}
+.navlink{
+    text-decoration: none;
+}
+.navlink:hover{
+    font-weight: bold;
+}
+.navlink:visited{
+    color: linen;
+}
+.titulos3{
+    font-size: 30px;
+    color: darkmagenta;
+}
+button{
+    border-radius: 10px;
+    background-color: darkslategrey;
+    color: linen;
+    height: 40px;
+    width: 150px;
+    align-self: center;
+    margin: 15px;
+}
+.titulo4{
+    color: linen;
+    font-size: 38px;
+    text-align: center;
+}
+h5{
+    text-align: left;
+    font-family: "Cooper Black";
+}
+.cajas{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.mensaje{
+    height: 100px;
+}
