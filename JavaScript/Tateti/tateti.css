@@ -1,0 +1,13 @@
+.cuerpo{
+    margin: 30px auto;
+    width: 350px;
+    height: 350px;
+    border: 2px solid midnightblue;
+    border-radius: 10px;
+    background-color: darkmagenta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
