@@ -1,13 +1,31 @@
 .cuerpo{
     margin: 30px auto;
     width: 350px;
-    height: 350px;
+    height: 400px;
     border: 2px solid midnightblue;
     border-radius: 10px;
-    background-color: darkmagenta;
+    background-color: cadetblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px;
+}
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 30px;
+}
+.casilla{
+    height: 60px;
+    width: 60px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.casilla:disabled {
+    background-color: lightgray;
+    color: gray;
+    cursor: not-allowed;
 }

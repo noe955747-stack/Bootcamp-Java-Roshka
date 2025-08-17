@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <title>Tateti</title>
     <link rel="stylesheet" href="tateti.css">
+    <script src="tateti.js"></script>
 </head>
 <body>
     <div class="cuerpo">
         <h2>Tateti</h2>
         <h3 id="texto">Jugador: X</h3>
-        <div id="tablero">
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+        <div class="tablero">
+            <button class="casilla" id="1" onclick="marcarCasilla(id)"></button>
+            <button class="casilla" id="2" onclick="marcarCasilla(id)"></button>
+            <button class="casilla" id="3" onclick="marcarCasilla(id)"></button>
+            <button class="casilla" id="4" onclick="marcarCasilla(id)"></button>
+            <button class="casilla" id="5" onclick="marcarCasilla(id)"></button>
+            <button class="casilla" id="6" onclick="marcarCasilla(id)"></button>
+            <button class="casilla" id="7" onclick="marcarCasilla(id)"></button>
+            <button class="casilla" id="8" onclick="marcarCasilla(id)"></button>
+            <button class="casilla" id="9" onclick="marcarCasilla(id)"></button>
         </div>
+        <button id="reiniciar" onclick="reiniciar()" disabled>Reiniciar</button>
     </div>
 </body>
 </html>
