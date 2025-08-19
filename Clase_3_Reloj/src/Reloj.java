@@ -40,14 +40,14 @@ public class Reloj {
         }
     }
     public void setMinutos(int minutos) {
-        if (minutos >= 0 && minutos <= 23) {
+        if (minutos >= 0 && minutos <= 59) {
             this.minutos = minutos;
         } else {
             throw new IllegalArgumentException("Minutos fuera de rango.");
         }
     }
     public void setSegundos(int segundos) {
-        if (segundos >= 0 && segundos <= 23) {
+        if (segundos >= 0 && segundos <= 59) {
             this.segundos = segundos;
         } else {
             throw new IllegalArgumentException("Segundos fuera de rango.");
