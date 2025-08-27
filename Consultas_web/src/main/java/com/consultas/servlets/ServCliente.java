@@ -14,10 +14,14 @@ import java.sql.*;
 public class ServCliente extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/plain");
-        response.getWriter().println("✅ Servlet activo");
+        doPost(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        response.resetBuffer();
+
+        PrintWriter out = response.getWriter();
+
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String nro_cedula = request.getParameter("nro_cedula");
@@ -32,11 +36,23 @@ public class ServCliente extends HttpServlet {
                 nuevoId = rs.getInt(1) + 1;
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            out.print("<!DOCTYPE html>");
+            out.print("<html lang='es'>");
+            out.print("<head>");
+            out.print("  <meta charset='UTF-8'>");
+            out.print("  <meta http-equiv='X-UA-Compatible' content='IE=edge'>");
+            out.print("  <title>Error al obtener ID</title>");
+            out.print("</head>");
+            out.print("<body>");
+            out.print("  <h3>Error al obtener el ID</h3>");
+            out.print("  <p>" + e.getMessage() + "</p>");
+            out.print("  <a href='menu_principal.html'>Volver al menú</a>");
+            out.print("</body>");
+            out.print("</html>");
+            out.flush();
+            return;
         }
 
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
         System.out.println("El codigo llego hasta aca");
         try (Connection con = Coneccion.conectar()) {
             String sql = "INSERT INTO cliente (id, nombre, apellido, nro_cedula, telefono) VALUES (?, ?, ?, ?, ?)";
@@ -48,21 +64,47 @@ public class ServCliente extends HttpServlet {
             ps.setString(5, telefono);
             ps.executeUpdate();
 
-            out.println("<html><body>");
-            out.println("<h3>✅ Cliente agregado correctamente</h3>");
+            out.print("<!DOCTYPE html>");
+            out.print("<html lang='es'>");
+            out.print("<head>");
+            out.print("  <meta charset='UTF-8'>");
+            out.print("  <meta http-equiv='X-UA-Compatible' content='IE=edge'>");
+            out.print("  <title>Cliente Agregado</title>");
+            out.print("  <link rel='stylesheet' href='"
+                    + request.getContextPath()
+                    + "/consulta_web.css'>");
+            out.print("</head>");
+            out.print("<body>");
+
+            out.print("  <header class='encabezado'>");
+            out.print("    <h3>Bootcamp Market</h3>");
+            out.print("    <nav>");
+            out.print("      <a href='menu_principal.html' class='navlink'>Volver al Menú Principal</a>");
+            out.print("    </nav>");
+            out.print("  </header>");
+            out.println("<div class='contenedor1'><h3>Cliente agregado correctamente</h3>");
             out.println("<p>Nombre: " + nombre + "</p>");
             out.println("<p>Apellido: " + apellido + "</p>");
-            out.println("<p>DNI: " + nro_cedula + "</p>");
+            out.println("<p>Cedula: " + nro_cedula + "</p>");
             out.println("<p>Teléfono: " + telefono + "</p>");
-            out.println("<a href='menu_principal.html'>Volver al menú</a>");
+            out.println("</div>");
             out.println("</body></html>");
 
         } catch (SQLException e) {
-            out.println("<html><body>");
-            out.println("<h3> Error al guardar</h3>");
-            out.println("<p>" + e.getMessage() + "</p>");
-            out.println("<a href='menu_principal.html'>Volver al menú</a>");
-            out.println("</body></html>");
+            out.print("<!DOCTYPE html>");
+            out.print("<html lang='es'>");
+            out.print("<head>");
+            out.print("  <meta charset='UTF-8'>");
+            out.print("  <meta http-equiv='X-UA-Compatible' content='IE=edge'>");
+            out.print("  <title>Error al guardar</title>");
+            out.print("</head>");
+            out.print("<body>");
+            out.print("  <h3>Error al guardar</h3>");
+            out.print("  <p>" + e.getMessage() + "</p>");
+            out.print("  <a href='menu_principal.html'>Volver al menú</a>");
+            out.print("</body>");
+            out.print("</html>");
+            out.flush();
         }
     }
 }

@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Agregar Moneda</title>
+    <link rel="stylesheet" href="consulta_web.css">
 </head>
 <body>
-<h2>Formulario de ingreso de Moneda</h2>
-<form action="ServMoneda" method="post">
-  <label>Nombre de la moneda:</label>
-  <input type="text" name="nombre" required><br><br>
-  <button type="submit">Guardar</button>
-</form>
+<header class="encabezado">
+    <h3>Bootcamp Market</h3>
+    <nav>
+        <nav>
+            <a href="menu_principal.html" class="navlink">Volver al Menu Principal</a>
+        </nav>
+    </nav>
+</header>
+<div class="contenedor1">
+    <h2>Formulario de ingreso de Moneda</h2>
+    <form action="ServMoneda" method="post">
+        <label>Nombre de la moneda:</label>
+        <input type="text" name="nombre" required><br><br>
+        <button type="submit" class="boton1">Guardar</button>
+    </form>
+</div>
 </body>
 </html>

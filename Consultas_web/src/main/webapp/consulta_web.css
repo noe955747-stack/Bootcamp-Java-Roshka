@@ -1,0 +1,55 @@
+body{
+    background-color: darkslategrey;
+}
+.contenedor1{
+    background-color: aliceblue;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 50px;
+}
+.boton1{
+    border-radius: 10px;
+    background-color: darkslategrey;
+    color: aliceblue;
+    height: 40px;
+    width: 150px;
+    margin: 15px;
+    text-decoration: none;
+    align-content: center;
+    text-align: center;
+}
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: teal;
+    color: linen;
+}
+.navlink{
+    text-decoration: none;
+}
+.navlink:hover{
+    font-weight: bold;
+}
+.navlink:visited{
+    color: linen;
+}
+.boton1:hover{
+    font-weight: bold;
+}
+.boton1:visited{
+    color: linen;
+}
+.contenedor1 table th,
+.contenedor1 table td {
+    text-align: center;
+    vertical-align: middle;
+}

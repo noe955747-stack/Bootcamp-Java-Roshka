@@ -49,7 +49,7 @@ body{
 }
 .encabezado {
     display: flex;
-    justify-content: space-between; /* o center, flex-start, etc. */
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
     background-color: darkslategrey;

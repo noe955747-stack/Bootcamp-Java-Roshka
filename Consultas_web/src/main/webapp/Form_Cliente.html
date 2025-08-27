@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Agregar Cliente</title>
+    <link rel="stylesheet" href="consulta_web.css">
 </head>
 <body>
+<header class="encabezado">
+    <h3>Bootcamp Market</h3>
+    <nav>
+        <nav>
+            <a href="menu_principal.html" class="navlink">Volver al Menu Principal</a>
+        </nav>
+    </nav>
+</header>
+<div class="contenedor1">
 <h2>Formulario de ingreso de cliente</h2>
 <form action="ServCliente" method="post">
     <label>Nombre:</label>
-    <input type="text" name="nombre" required><br><br>s
+    <input type="text" name="nombre" required><br><br>
 
     <label>Apellido:</label>
     <input type="text" name="apellido" required><br><br>
@@ -19,7 +29,8 @@
     <label>Teléfono:</label>
     <input type="text" name="telefono" required><br><br>
 
-    <button type="submit">Guardar</button>
+    <button class="boton1" type="submit">Guardar</button>
 </form>
+</div>
 </body>
 </html>
