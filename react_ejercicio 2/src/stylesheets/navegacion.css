@@ -1,0 +1,32 @@
+.navegacion {
+    background-color: #003366;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:17%;
+    z-index: 1000;
+}
+
+.navegacion ul {
+    list-style: none;
+    margin: 10px;
+    padding: 40px;
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+}
+
+.navegacion li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navegacion li a:hover {
+    color: #00ccff;
+}
